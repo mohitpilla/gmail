@@ -36,8 +36,7 @@ public class Program {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
-		WebElement option = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//*[@id=\"initialView\"]/div[2]/div[3]/div/div/content[1]")));
+		WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"initialView\"]/div[2]/div[3]/div/div/content[1]")));
 		option.click();
 		option.clear();
 		Thread.sleep(5000);

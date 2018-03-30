@@ -3,6 +3,8 @@ package selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,6 +17,10 @@ public class Program {
 		String lastname = "test";
 		String mailid = "automationtest369";
 		String password = "testingautomation";
+		String passagain = "testingautomation";
+		String browserType = "firefox";
+		WebDriver driver;
+		
 		String birthmonth;
 		String birthday;
 		String birthyear;
@@ -22,13 +28,9 @@ public class Program {
 		String phonenumber;
 		String recoveryemail;
 		String countrycode;
+	
+		driver = selenium.Browserfactory.open(browserType);
 		
-		// testing develop branch
-		
-		//develop commit 2
-
-		WebDriver driver = new SafariDriver();
-
 		driver.get("https://accounts.google.com");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[text() = 'More options']")).click();
@@ -40,12 +42,22 @@ public class Program {
 		option.click();
 		option.clear();
 		Thread.sleep(5000);
+		
 
-		driver.findElement(By.name("FirstName")).sendKeys(firstname);
-		driver.findElement(By.id("LastName")).sendKeys(lastname);
-		driver.findElement(By.name("GmailAddress")).sendKeys(mailid);
-		driver.findElement(By.name("Passwd")).sendKeys(password);
-		driver.findElement(By.name("PasswdAgain")).sendKeys("testingautomation");
+		//defining webemlements
+		WebElement firstnameElement = driver.findElement(By.name("FirstName"));
+		WebElement lastnameElement = driver.findElement(By.id("LastName"));
+		WebElement mailidElement = driver.findElement(By.name("GmailAddress"));
+		WebElement passwordElement = driver.findElement(By.name("Passwd"));
+		WebElement passagainElement = driver.findElement(By.name("PasswdAgain"));
+		
+		
+
+		firstnameElement.sendKeys(firstname);
+		lastnameElement.sendKeys(lastname);
+		mailidElement.sendKeys(mailid);
+		passwordElement.sendKeys(password);
+		passagainElement.sendKeys(passagain);
 		driver.findElement(By.xpath("//*[@id=\"BirthMonth\"]/div")).sendKeys("January");
 		driver.findElement(By.id("BirthDay")).sendKeys("01");
 		driver.findElement(By.id("BirthYear")).sendKeys("1991");
@@ -70,5 +82,6 @@ public class Program {
 		driver.findElement(By.xpath("//*[@id=\"signupidvmethod-voice\"]")).click();
 
 	}
+
 
 }

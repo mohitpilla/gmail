@@ -1,0 +1,11 @@
+Job duties and requirements 
+
+Job Duty	Description	% of  time for each task
+Scrum meetings	The beneficiary is responsible to Attend daily status calls to update the progress	2
+Application system analysis	Provides intermediate level system analysis, design, development, and implementation of applications and databases for mainframe, client/server, Web, and PC-based software. Integrates third party products.	20
+Code Development	The beneficiary is responsible to Develop code and test artifacts that reuse subroutines or objects, is well structured, backed by automated tests and responsible for supporting existing applications developed using Spring Tool Suite.	28
+Prepare Automated test scripts	Responsible to write automated acceptance test cases for the software being developed using Cucumber testing framework and Junit.	20
+Production support for elevated code	Elevates code into the development, test, and Production environments on schedule. Provides follow up Production support. Submits change control requests and documents.	10
+Prototyping	Responsible participates in systems analysis activities, including system requirements analysis and definition.	10
+Analyzing business requirements for developed application	Beneficiary is responsible for supporting the developed application and analyzing business requirements and ensure that underlying application technology meets both shot-term and long-term business needs and that system designs can adapt to emerging business and technology demands	5
+Application Deployment	Responsible for communicating the progress of tasks with the project management team using Atlassian Tool Suite (JIRA, Confluence, Bitbucket, Bamboo, SVN	5
